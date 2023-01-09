@@ -22,12 +22,12 @@ public class connectToDbClass {
 	public void connectToDb() {
 
 		System.out.println("plese write the paht to the db");
-//		String pahtDb = sc.next();
-		String pahtDb = "jdbc:mysql://localhost:3306/sakila";
-//		System.out.println("user name?");
-//		String userName = sc.next();
-//		System.out.println("password?");
-//		String password = sc.next();
+		String pahtDb = sc.next();
+		// String pahtDb = "jdbc:mysql://localhost:3306/sakila";
+		System.out.println("user name?");
+		String userName = sc.next();
+		System.out.println("password?");
+		String password = sc.next();
 
 		try {
 			Class.forName("java.lang.String");
@@ -37,7 +37,7 @@ public class connectToDbClass {
 
 		System.out.println("Connecting to sakila database...");
 		try {
-			conn = DriverManager.getConnection(pahtDb, "root", "tamirsapir055");
+			conn = DriverManager.getConnection(pahtDb,userName, password);
 			stmt = conn.createStatement();
 			System.out.println("connection to sakila successfully");
 
