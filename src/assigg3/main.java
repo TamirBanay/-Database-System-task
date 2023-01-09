@@ -19,6 +19,7 @@ public class main {
 
 		menuClass menu = new menuClass(connToDb.conn, connToDb.stmt);
 		menu.menu();
+		System.out.println();
 //		
 	}
 
